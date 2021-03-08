@@ -1,0 +1,55 @@
+[
+    {
+        "sourceName": "顶点小说",
+        "method": "GET",
+        "bookSourceUrl": "https://www.280xs.com",
+        "ruleSearch": {
+            "bookList":"//*[@id='li1']",
+            "author":"div[2]/div[1]/span[2]/text()",
+            "coverUrl":"div[1]/a/img/@src",
+            "bookUrl":"div[1]/a/@href",
+            "intro":"div[2]/p/text()",
+            "kind":"div[2]/div[1]/span[1]/text()",
+            "name":"div[2]/div[1]/strong/a/text()"
+        },
+        "ruleBookInfo": {
+            "author": "//*[@id='maininfo']/div[1]/h3/text()",
+            "name" : "//*[@id='maininfo']/div[1]/h1/text()",
+            "intro" : "//*[@id='intro']/p/text()",
+            "kind" : "//*[@id='maininfo']/div[1]/p[2]/text()",
+            "cover_url" : "/html/body/div[5]/div[2]/img/@src",
+            "last_chapter" : "//*[@id='maininfo']/div[1]/span/a/text()",
+            "toc_url" : "/html/body/div[5]/div[6]/div"
+        },
+        "searchUrl":"https://www.280xs.com/searchbook.php?search_key={{key}}",
+        "charset":""
+    },
+    {
+        "sourceName": "新笔趣阁",
+        "method":"GET",
+        "ruleSearch" : {
+            "bookList": "/html/body/div/div[6]/div/ul/li",
+            "author": "/div/div[2]/div[2]/span[1]/text()",
+            "kind":"/div/div[2]/div[2]/span[2]/text()",
+            "bookUrl": "/div/div[1]/a/@href",
+            "intro": "/div/div[2]/div[3]/text()",
+            "name":"/div/div[2]/div[1]/a/text()",
+            "coverUrl":"/div/div[1]/a/img/@src"
+        },
+        "searchUrl": "https://www.xquge.com/search?keyword={{key}}"
+    },
+    {
+        "sourceName":"追书神器",
+        "method":"GET",
+        "ruleSearch": {
+            "bookList": "//*[@id='J_pageSearchWraper']/section/a",
+            "author": "div/div[2]/p[1]/text()[1]",
+            "bookUrl": "@href",
+            "coverUrl": "div/div[1]/img/@src",
+            "intro": "div/div[2]/p[2]/text()",
+            "kind": "div/div[2]/p[1]/text()[2]",
+            "name" : "div/div[2]/h4/text()"
+        },
+        "searchUrl":"http://m.zhuishushenqi.com/search?val={{key}}"
+    }
+]
