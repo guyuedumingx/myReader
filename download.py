@@ -139,9 +139,11 @@ chapter_url = book_info.get_chapter_url_by_no(1)
 content = downloader.get_chapter_info(chapter_url)
 books = []
 for book in book_list:
-    books.append(book.to_json())
+    books.append(book)
 
 with open("books.json", "w", encoding="utf-8") as f:
-    f.write(json.dumps(books))
-book_info.save("book_info.json")
+    f.write(json.dumps(books, ensure_ascii=False))
+with open ("1.html", "w", encoding="utf-8") as f:
+    f.write(content)
+# book_info.save("book_info.json")
 
