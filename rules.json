@@ -21,6 +21,16 @@
             "last_chapter" : "//*[@id='maininfo']/div[1]/span/a/text()",
             "toc_url" : "/html/body/div[5]/div[6]/div"
         },
+        "ruleContent" : {
+            "content" : "//*[@id='book_text']",
+            "nextContentUrl" : ""
+        },
+        "ruleToc":{
+            "chapterList" : "/html/body/div[5]/div[6]/div/ul/li",
+            "chapterName" : "a/text()",
+            "chapterUrl" : "a/@href",
+            "nextTocUrl" : ""
+        },
         "searchUrl":"https://www.280xs.com/searchbook.php?search_key={{key}}",
         "charset":""
     },
